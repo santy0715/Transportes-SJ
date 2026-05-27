@@ -1,13 +1,17 @@
 package co.edu.poligran.paradigmas.backend.negocio;
 
-import java.util.*;
-import co.edu.poligran.paradigmas.backend.vo.*;
+import java.util.ArrayList;
+import java.util.List;
+import co.edu.poligran.paradigmas.backend.vo.BoletoVO;
 
 public class BoletoManager {
 
     private List<BoletoVO> lista = new ArrayList<>();
 
-    public void crear(BoletoVO b) {
+    public void crear(BoletoVO b) throws Exception {
+        if (buscar(b.getId()) != null) {
+            throw new Exception("Boleto ya existe");
+        }
         lista.add(b);
     }
 
@@ -24,24 +28,27 @@ public class BoletoManager {
         return null;
     }
 
-    public void actualizar(BoletoVO boletoActualizado) throws Exception {
-        BoletoVO b = buscar(boletoActualizado.getId());
-        if (b == null) {
+    public void actualizar(BoletoVO boleto) throws Exception {
+        BoletoVO existente = buscar(boleto.getId());
+
+        if (existente == null) {
             throw new Exception("Boleto no existe");
         }
 
-        b.setPrecio(boletoActualizado.getPrecio());
-        b.setFecha(boletoActualizado.getFecha());
-        b.setPasajero(boletoActualizado.getPasajero());
-        b.setRuta(boletoActualizado.getRuta());
-        b.setAsiento(boletoActualizado.getAsiento());
+        existente.setPrecio(boleto.getPrecio());
+        existente.setFecha(boleto.getFecha());
+        existente.setPasajero(boleto.getPasajero());
+        existente.setRuta(boleto.getRuta());
+        existente.setAsiento(boleto.getAsiento());
     }
 
     public void eliminar(int id) throws Exception {
         BoletoVO b = buscar(id);
+
         if (b == null) {
             throw new Exception("Boleto no existe");
         }
+
         lista.remove(b);
     }
 }

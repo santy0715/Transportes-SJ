@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.BoletoController">
+
+    <Label text="CRUD Boletos"/>
+
+    <TextField fx:id="txtId"
+               promptText="ID"/>
+
+    <TextField fx:id="txtPrecio"
+               promptText="Precio"/>
+
+    <TextField fx:id="txtFecha"
+               promptText="Fecha"/>
+
+    <TextField fx:id="txtPasajero"
+               promptText="ID Pasajero"/>
+
+    <TextField fx:id="txtRuta"
+               promptText="ID Ruta"/>
+
+    <TextField fx:id="txtAsiento"
+               promptText="Número Asiento"/>
+
+    <HBox spacing="10" alignment="CENTER">
+
+        <Button text="Crear"
+                onAction="#crear"/>
+
+        <Button text="Buscar"
+                onAction="#buscar"/>
+
+        <Button text="Actualizar"
+                onAction="#actualizar"/>
+
+        <Button text="Eliminar"
+                onAction="#eliminar"/>
+
+    </HBox>
+
+    <TableView fx:id="tabla"
+               prefWidth="700"
+               prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="colId"
+                         text="ID"
+                         prefWidth="70"/>
+
+            <TableColumn fx:id="colPrecio"
+                         text="Precio"
+                         prefWidth="100"/>
+
+            <TableColumn fx:id="colFecha"
+                         text="Fecha"
+                         prefWidth="120"/>
+
+            <TableColumn fx:id="colPasajero"
+                         text="Pasajero"
+                         prefWidth="100"/>
+
+            <TableColumn fx:id="colRuta"
+                         text="Ruta"
+                         prefWidth="100"/>
+
+            <TableColumn fx:id="colAsiento"
+                         text="Asiento"
+                         prefWidth="100"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

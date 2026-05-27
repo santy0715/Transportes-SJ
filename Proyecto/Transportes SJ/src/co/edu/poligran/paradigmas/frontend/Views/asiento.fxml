@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.AsientoController">
+
+    <Label text="CRUD Asientos"/>
+
+    <TextField fx:id="txtNumero"
+               promptText="Número"/>
+
+    <TextField fx:id="txtOcupado"
+               promptText="Ocupado (true/false)"/>
+
+    <HBox spacing="10" alignment="CENTER">
+
+        <Button text="Crear"
+                onAction="#crear"/>
+
+        <Button text="Buscar"
+                onAction="#buscar"/>
+
+        <Button text="Actualizar"
+                onAction="#actualizar"/>
+
+        <Button text="Eliminar"
+                onAction="#eliminar"/>
+
+    </HBox>
+
+    <TableView fx:id="tabla"
+               prefWidth="400"
+               prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="colNumero"
+                         text="Número"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="colOcupado"
+                         text="Ocupado"
+                         prefWidth="150"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>
