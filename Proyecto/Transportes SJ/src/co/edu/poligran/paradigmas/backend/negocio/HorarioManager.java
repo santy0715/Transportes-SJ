@@ -24,7 +24,18 @@ public class HorarioManager {
         }
         return null;
     }
+    public void actualizar(HorarioVO horario) throws Exception {
 
+        HorarioVO existente = buscar(horario.getId());
+
+        if (existente == null) {
+            throw new Exception("El horario no existe");
+        }
+
+        existente.setHoraSalida(horario.getHoraSalida());
+        existente.setHoraLlegada(horario.getHoraLlegada());
+        existente.setDia(horario.getDia());
+    }
     public void eliminar(int id) throws Exception {
         HorarioVO h = buscar(id);
         if(h == null){

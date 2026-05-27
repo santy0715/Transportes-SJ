@@ -24,7 +24,18 @@ public class PasajeroManager {
         }
         return null;
     }
+    public void actualizar(PasajeroVO pasajero) throws Exception {
 
+        PasajeroVO existente = buscar(pasajero.getId());
+
+        if (existente == null) {
+            throw new Exception("El pasajero no existe");
+        }
+
+        existente.setNombre(pasajero.getNombre());
+        existente.setDocumento(pasajero.getDocumento());
+        existente.setTelefono(pasajero.getTelefono());
+    }
     public void eliminar(int id) throws Exception {
         PasajeroVO p = buscar(id);
         if(p == null){

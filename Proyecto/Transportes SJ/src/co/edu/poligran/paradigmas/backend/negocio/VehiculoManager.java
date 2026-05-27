@@ -24,6 +24,19 @@ public class VehiculoManager {
         }
         return null;
     }
+    public void actualizar(VehiculoVO nuevo) throws Exception {
+
+        VehiculoVO existente = buscar(nuevo.getId());
+
+        if(existente == null){
+            throw new Exception("Vehiculo no existe");
+        }
+
+        existente.setPlaca(nuevo.getPlaca());
+        existente.setModelo(nuevo.getModelo());
+        existente.setCapacidad(nuevo.getCapacidad());
+
+    }
 
     public void eliminar(int id) throws Exception {
         VehiculoVO v = buscar(id);
@@ -32,4 +45,5 @@ public class VehiculoManager {
         }
         lista.remove(v);
     }
+
 }

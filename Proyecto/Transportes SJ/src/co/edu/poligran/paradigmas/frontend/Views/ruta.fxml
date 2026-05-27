@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.RutaController">
+
+    <Label text="CRUD Rutas"/>
+
+    <TextField fx:id="txtId"
+               promptText="ID"/>
+
+    <TextField fx:id="txtOrigen"
+               promptText="Origen"/>
+
+    <TextField fx:id="txtDestino"
+               promptText="Destino"/>
+
+    <TextField fx:id="txtHorario"
+               promptText="ID Horario"/>
+
+    <TextField fx:id="txtVehiculo"
+               promptText="ID Vehiculo"/>
+
+    <HBox spacing="10" alignment="CENTER">
+
+        <Button text="Crear"
+                onAction="#crear"/>
+
+        <Button text="Buscar"
+                onAction="#buscar"/>
+
+        <Button text="Actualizar"
+                onAction="#actualizar"/>
+
+        <Button text="Eliminar"
+                onAction="#eliminar"/>
+
+    </HBox>
+
+    <TableView fx:id="tabla"
+               prefWidth="600"
+               prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="colId"
+                         text="ID"
+                         prefWidth="70"/>
+
+            <TableColumn fx:id="colOrigen"
+                         text="Origen"
+                         prefWidth="130"/>
+
+            <TableColumn fx:id="colDestino"
+                         text="Destino"
+                         prefWidth="130"/>
+
+            <TableColumn fx:id="colHorario"
+                         text="Horario"
+                         prefWidth="120"/>
+
+            <TableColumn fx:id="colVehiculo"
+                         text="Vehiculo"
+                         prefWidth="120"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>

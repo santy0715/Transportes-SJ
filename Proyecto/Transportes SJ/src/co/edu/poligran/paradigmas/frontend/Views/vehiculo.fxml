@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.VehiculoController">
+
+    <Label text="CRUD Vehículos"/>
+
+    <TextField
+            fx:id="txtId"
+            promptText="ID"/>
+
+    <TextField
+            fx:id="txtPlaca"
+            promptText="Placa"/>
+
+    <TextField
+            fx:id="txtModelo"
+            promptText="Modelo"/>
+
+    <TextField
+            fx:id="txtCapacidad"
+            promptText="Capacidad"/>
+
+    <HBox spacing="10" alignment="CENTER">
+
+        <Button
+                text="Crear"
+                onAction="#crearVehiculo"/>
+
+        <Button
+                text="Buscar"
+                onAction="#buscarVehiculo"/>
+
+        <Button
+                text="Actualizar"
+                onAction="#actualizarVehiculo"/>
+
+        <Button
+                text="Eliminar"
+                onAction="#eliminarVehiculo"/>
+
+    </HBox>
+
+    <TableView fx:id="tablaVehiculos"
+               prefHeight="250"
+               prefWidth="500">
+
+        <columns>
+
+            <TableColumn fx:id="colId"
+                         text="ID"
+                         prefWidth="80"/>
+
+            <TableColumn fx:id="colPlaca"
+                         text="Placa"
+                         prefWidth="120"/>
+
+            <TableColumn fx:id="colModelo"
+                         text="Modelo"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="colCapacidad"
+                         text="Capacidad"
+                         prefWidth="120"/>
+
+        </columns>
+
+    </TableView>
+
+</VBox>
