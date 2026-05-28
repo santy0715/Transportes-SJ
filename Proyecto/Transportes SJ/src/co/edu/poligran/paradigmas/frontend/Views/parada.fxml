@@ -7,55 +7,36 @@
       alignment="CENTER"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.ParadaController">
-
     <Label text="CRUD Paradas"/>
-
     <TextField fx:id="txtId"
                promptText="ID"/>
-
     <TextField fx:id="txtNombre"
                promptText="Nombre"/>
-
     <TextField fx:id="txtUbicacion"
                promptText="Ubicación"/>
-
     <HBox spacing="10" alignment="CENTER">
-
         <Button text="Crear"
                 onAction="#crear"/>
-
         <Button text="Buscar"
                 onAction="#buscar"/>
-
         <Button text="Actualizar"
                 onAction="#actualizar"/>
-
         <Button text="Eliminar"
                 onAction="#eliminar"/>
-
     </HBox>
-
     <TableView fx:id="tabla"
                prefWidth="500"
                prefHeight="250">
-
         <columns>
-
             <TableColumn fx:id="colId"
                          text="ID"
                          prefWidth="100"/>
-
             <TableColumn fx:id="colNombre"
                          text="Nombre"
                          prefWidth="180"/>
-
             <TableColumn fx:id="colUbicacion"
                          text="Ubicación"
                          prefWidth="180"/>
-
         </columns>
-
     </TableView>
-
 </VBox>
-

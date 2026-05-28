@@ -2,55 +2,39 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.MenuController">
-
     <left>
         <VBox spacing="15"
               prefWidth="200"
               style="-fx-background-color: #2c3e50; -fx-padding: 20;">
-
             <Label text="Transportes SJ"
                    style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
-
             <Button text="Vehículos"
                     onAction="#abrirVehiculos"/>
-
             <Button text="Pasajeros"
                     onAction="#abrirPasajeros"/>
-
             <Button text="Horarios"
                     onAction="#abrirHorarios"/>
-
             <Button text="Rutas"
                     onAction="#abrirRutas"/>
-
             <Button text="Boletos"
                     onAction="#abrirBoletos"/>
-
             <Button text="Paradas"
                     onAction="#abrirParadas"/>
-
             <Button text="Asientos"
                     onAction="#abrirAsientos"/>
-
             <Button text="Persona"
                     onAction="#abrirPersonas"/>
-
             <Button text="Empleado"
                     onAction="#abrirEmpleados"/>
-
             <Button text="Conductor"
                     onAction="#abrirConductores"/>
-
         </VBox>
     </left>
-
     <center>
         <StackPane fx:id="contenedor">
             <Label text="Bienvenido al sistema"/>
         </StackPane>
     </center>
-
 </BorderPane>

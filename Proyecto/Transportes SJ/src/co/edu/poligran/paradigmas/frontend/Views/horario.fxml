@@ -2,66 +2,45 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <VBox spacing="15"
       alignment="CENTER"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.HorarioController">
-
     <Label text="CRUD Horarios"/>
-
     <TextField fx:id="txtId"
                promptText="ID"/>
-
     <TextField fx:id="txtSalida"
                promptText="Hora Salida"/>
-
     <TextField fx:id="txtLlegada"
                promptText="Hora Llegada"/>
-
     <TextField fx:id="txtDia"
                promptText="Dia"/>
-
     <HBox spacing="10" alignment="CENTER">
-
         <Button text="Crear"
                 onAction="#crear"/>
-
         <Button text="Buscar"
                 onAction="#buscar"/>
-
         <Button text="Actualizar"
                 onAction="#actualizar"/>
-
         <Button text="Eliminar"
                 onAction="#eliminar"/>
-
     </HBox>
-
     <TableView fx:id="tabla"
                prefWidth="550"
                prefHeight="250">
-
         <columns>
-
             <TableColumn fx:id="colId"
                          text="ID"
                          prefWidth="80"/>
-
             <TableColumn fx:id="colSalida"
                          text="Salida"
                          prefWidth="140"/>
-
             <TableColumn fx:id="colLlegada"
                          text="Llegada"
                          prefWidth="140"/>
-
             <TableColumn fx:id="colDia"
                          text="Dia"
                          prefWidth="120"/>
-
         </columns>
-
     </TableView>
-
 </VBox>

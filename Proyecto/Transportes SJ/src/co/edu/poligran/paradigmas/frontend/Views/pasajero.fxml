@@ -2,66 +2,45 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <VBox spacing="15"
       alignment="CENTER"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.PasajeroController">
-
     <Label text="CRUD Pasajeros"/>
-
     <TextField fx:id="txtId"
                promptText="ID"/>
-
     <TextField fx:id="txtNombre"
                promptText="Nombre"/>
-
     <TextField fx:id="txtDocumento"
                promptText="Documento"/>
-
     <TextField fx:id="txtTelefono"
                promptText="Telefono"/>
-
     <HBox spacing="10" alignment="CENTER">
-
         <Button text="Crear"
                 onAction="#crear"/>
-
         <Button text="Buscar"
                 onAction="#buscar"/>
-
         <Button text="Actualizar"
                 onAction="#actualizar"/>
-
         <Button text="Eliminar"
                 onAction="#eliminar"/>
-
     </HBox>
-
     <TableView fx:id="tabla"
                prefWidth="500"
                prefHeight="250">
-
         <columns>
-
             <TableColumn fx:id="colId"
                          text="ID"
                          prefWidth="80"/>
-
             <TableColumn fx:id="colNombre"
                          text="Nombre"
                          prefWidth="140"/>
-
             <TableColumn fx:id="colDocumento"
                          text="Documento"
                          prefWidth="140"/>
-
             <TableColumn fx:id="colTelefono"
                          text="Telefono"
                          prefWidth="120"/>
-
         </columns>
-
     </TableView>
-
 </VBox>

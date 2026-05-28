@@ -2,52 +2,35 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
 <VBox spacing="15"
       alignment="CENTER"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="co.edu.poligran.paradigmas.frontend.Controllers.PersonaController">
-
     <Label text="CRUD Persona"/>
-
     <TextField fx:id="txtId"
                promptText="ID"/>
-
     <TextField fx:id="txtNombre"
                promptText="Nombre"/>
-
     <HBox spacing="10" alignment="CENTER">
-
         <Button text="Crear"
                 onAction="#crear"/>
-
         <Button text="Buscar"
                 onAction="#buscar"/>
-
         <Button text="Actualizar"
                 onAction="#actualizar"/>
-
         <Button text="Eliminar"
                 onAction="#eliminar"/>
-
     </HBox>
-
     <TableView fx:id="tabla"
                prefWidth="400"
                prefHeight="250">
-
         <columns>
-
             <TableColumn fx:id="colId"
                          text="ID"
                          prefWidth="120"/>
-
             <TableColumn fx:id="colNombre"
                          text="Nombre"
                          prefWidth="220"/>
-
         </columns>
-
     </TableView>
-
 </VBox>
